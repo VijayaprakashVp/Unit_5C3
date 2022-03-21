@@ -1,12 +1,39 @@
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
+  const handleChange = (value) => {};
+
   return (
     <>
       <div className="navbar">
         {/* Populate 5 buttons with EXACT same classnames as of their routes name */}
         {/* Example: 
             <button className="history"> Link to history here  </button>  */}
+
+        <button className="home" onClick={() => handleChange("home")}>
+          {" "}
+          Home{" "}
+        </button>
+        <button className="history" onClick={() => handleChange("history")}>
+          {" "}
+          history{" "}
+        </button>
+        <button className="Mystery" onClick={() => handleChange("Mystery")}>
+          {" "}
+          Mystery{" "}
+        </button>
+        <button
+          className="Technology"
+          onClick={() => handleChange("Technology")}
+        >
+          {" "}
+          Technology{" "}
+        </button>
+        <button className="Mythology" onClick={() => handleChange("Mythology")}>
+          {" "}
+          Mythology{" "}
+        </button>
+
         {/* Home component will have `/` route and classname as `home`  */}
       </div>
     </>
