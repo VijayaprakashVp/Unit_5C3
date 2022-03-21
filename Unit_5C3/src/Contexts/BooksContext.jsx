@@ -2,13 +2,12 @@ import { createContext, useState, useEffect } from "react";
 
 export const BooksContext = createContext();
 
-const [list, setList] = useState([]);
+// const [list, setList] = useState([]);
 const [show, setShow] = useState([]);
-// console.log("list", list);
 
 useEffect(() => {
   axios.get("http://localhost:8080/Books").then(({ data }) => {
-    setList([...data]);
+    // setList([...data]);
     setShow([...data]);
   });
 }, []);
